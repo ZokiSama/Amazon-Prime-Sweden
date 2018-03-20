@@ -32,7 +32,24 @@ function appendList (array, location){
     });
     $(location).html(template); // skriver ut template på angiven plats
 }
-appendList(products, $('.product-list'));
+appendList(products, $('.product-list')); // startar funktionen som skriver ut varor och skickar vilken lista och var på sidan.
+
+// Funktion som lägger till varor i kundvagn
+function addToCart(array, id, location){
+  let item = array.find(function(i){
+    return i.id === id;
+  });
+
+  cart.push(item);
+  
+}
+
+// lägga till i kundvagn knapp
+$('.product').on('click', 'button', function(){
+  var id = $(this).attr('id');
+  addToCart(products, +id, $('.cart-list'));
+  console.log(cart);
+});
 
 
 });
