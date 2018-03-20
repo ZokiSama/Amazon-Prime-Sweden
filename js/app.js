@@ -36,12 +36,21 @@ appendList(products, $('.product-list')); // startar funktionen som skriver ut v
 
 // Funktion som lägger till varor i kundvagn
 function addToCart(array, id, location){
-  let item = array.find(function(i){
+  let a = array.find(function(i){
     return i.id === id;
   });
 
   cart.push(item);
-  
+
+  var item = `
+      <li class="item" id="${a.id}">
+        <h4>${a.name}</h4>
+         <button type="button">X</button> 
+      </li>
+      `;
+
+     $('span.amount').text(cart.length); // adds amount of items in cart
+     $(location).append(item); // skriver ut item på angiven plats 
 }
 
 // lägga till i kundvagn knapp
