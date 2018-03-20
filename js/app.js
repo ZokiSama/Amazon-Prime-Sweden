@@ -1,5 +1,7 @@
 $(function(){  
 
+let name = prompt('Skriv ditt namn:')
+
 let products = [ // Array med alla produkter
   {name: 'Trust GXT 628', category: 'Elektronik', id: 1, description: 'Some Text', price: 899, picture: './images/hogtalare.jpeg'},
   {name: 'Kef Högtalarpaket E305', category: 'Elektronik', id: 2, description: 'A perfectly balanced, seamlessly integrated high end 5.1 sub/sat system based on KEF’s new 4.25” Uni-Q driver array and a superlative matching subwoofer, the new E305 home theatre system outperforms the competition by filling the room with a spacious, exquisitely detailed and compellingly natural soundscape that captures all the magic of the original performance.', price: 12990, picture: './images/hogtalarevit.jpeg'},
